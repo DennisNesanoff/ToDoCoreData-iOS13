@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		8DE9B2FD2430B9EB00313346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9B2FC2430B9EB00313346 /* AppDelegate.swift */; };
 		8DE9B2FF2430B9EB00313346 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9B2FE2430B9EB00313346 /* SceneDelegate.swift */; };
-		8DE9B3012430B9EB00313346 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9B3002430B9EB00313346 /* ViewController.swift */; };
 		8DE9B3042430B9EB00313346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE9B3022430B9EB00313346 /* Main.storyboard */; };
 		8DE9B3062430B9EC00313346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE9B3052430B9EC00313346 /* Assets.xcassets */; };
 		8DE9B3092430B9EC00313346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE9B3072430B9EC00313346 /* LaunchScreen.storyboard */; };
+		8DE9B3132430DAE900313346 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9B3122430DAE900313346 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8DE9B2F92430B9EB00313346 /* ToDoCoreData-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDoCoreData-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE9B2FC2430B9EB00313346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE9B2FE2430B9EB00313346 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8DE9B3002430B9EB00313346 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8DE9B3032430B9EB00313346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DE9B3052430B9EC00313346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DE9B3082430B9EC00313346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DE9B30A2430B9EC00313346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DE9B3122430DAE900313346 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 			children = (
 				8DE9B2FC2430B9EB00313346 /* AppDelegate.swift */,
 				8DE9B2FE2430B9EB00313346 /* SceneDelegate.swift */,
-				8DE9B3002430B9EB00313346 /* ViewController.swift */,
 				8DE9B3022430B9EB00313346 /* Main.storyboard */,
+				8DE9B3122430DAE900313346 /* TableViewController.swift */,
 				8DE9B3052430B9EC00313346 /* Assets.xcassets */,
 				8DE9B3072430B9EC00313346 /* LaunchScreen.storyboard */,
 				8DE9B30A2430B9EC00313346 /* Info.plist */,
@@ -138,8 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DE9B3012430B9EB00313346 /* ViewController.swift in Sources */,
 				8DE9B2FD2430B9EB00313346 /* AppDelegate.swift in Sources */,
+				8DE9B3132430DAE900313346 /* TableViewController.swift in Sources */,
 				8DE9B2FF2430B9EB00313346 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +294,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "nesanoff.ToDoCoreData-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "nesanoff.ToDoCoreData-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
