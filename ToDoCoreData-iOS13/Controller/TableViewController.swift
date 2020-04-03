@@ -9,19 +9,20 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    let userDefaults = UserDefaults.standard
     var itemArr = [Item]()
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory,
+                                                in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var newItem = Item()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let newItem = Item()
         newItem.title = "Find Mike"
         itemArr.append(newItem)
         
-//        if let items = userDefaults.array(forKey: "ToDoList") as? [String] {
-//            itemArr = items
-//        }
+        loadItems()
     }
 
     // MARK: - tableViewDataSource
@@ -31,17 +32,13 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let item = itemArr[indexPath.row]
+        cell.textLabel?.text = item.title
 
-        cell.textLabel?.text = itemArr[indexPath.row].title
-
-        if itemArr[indexPath.row].done == true {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+        cell.accessoryType = item.done  ? .checkmark : .none
+        
         return cell
     }
     
@@ -50,14 +47,8 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(itemArr[indexPath.row])
         
-        if itemArr[indexPath.row].done == false {
-            itemArr[indexPath.row].done = true
-        } else {
-            itemArr[indexPath.row].done = false
-        }
-        
-        tableView.reloadData()
-        
+        itemArr[indexPath.row].done = !itemArr[indexPath.row].done
+        saveItems()
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -69,8 +60,8 @@ class TableViewController: UITableViewController {
             let newItem = Item()
             newItem.title = textField.text!
             self.itemArr.append(newItem)
-            self.userDefaults.set(self.itemArr, forKey: "ToDoList")
-            self.tableView.reloadData()
+            
+            self.saveItems()
         }
         
         alert.addTextField { (alertTextField) in
@@ -82,4 +73,26 @@ class TableViewController: UITableViewController {
         present(alert, animated: true)
     }
     
+    func saveItems() {
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(itemArr)
+            try data.write(to: dataFilePath!)
+        } catch {
+            print("Error encoding item array, \(error)")
+        }
+        
+        tableView.reloadData()
+    }
+    
+    func loadItems() {
+        if let data = try? Data(contentsOf: dataFilePath!) {
+            let decoder = PropertyListDecoder()
+            do {
+                itemArr = try decoder.decode([Item].self, from: data)
+            } catch {
+                print(error)
+            }
+        }
+    }
 }
