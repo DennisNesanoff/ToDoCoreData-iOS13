@@ -18,10 +18,6 @@ class TableViewController: UITableViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        let newItem = Item()
-        newItem.title = "Find Mike"
-        itemArr.append(newItem)
-        
         loadItems()
     }
 
