@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jYE-1B-2ig">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,7 +10,7 @@
         <!--ToDoCoreData-->
         <scene sceneID="BH9-lW-RWo">
             <objects>
-                <tableViewController id="nQ0-VR-5cM" customClass="TableViewController" customModule="ToDoCoreData_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="nQ0-VR-5cM" customClass="ToDoListViewController" customModule="ToDoCoreData_iOS13" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dWd-nN-1SB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,8 +31,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ToDoCoreData" id="Exo-pO-I7J">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wgb-0r-lt4">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="wgb-0r-lt4">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="nQ0-VR-5cM" id="XOm-Wc-mtF"/>
                             </connections>
