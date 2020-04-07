@@ -74,41 +74,34 @@ class ToDoListViewController: UITableViewController {
     }
     
     func saveItems() {
-        do {
-            try context.save()
-        } catch {
-            print("Error saving conext, \(error)")
-        }
+        do { try context.save()}
+        catch { print("Error saving conext, \(error)") }
         
         tableView.reloadData()
     }
     
-    func loadItems() {
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
-        do {
-            itemArr = try context.fetch(request)
-        } catch {
-            print("Error fetching data from context, \(error)")
-        }
+    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest()) {
+        do { itemArr = try context.fetch(request) }
+        catch { print("Error fetching data from context, \(error)") }
+        tableView.reloadData()
     }
-    
-    
 }
 
 extension ToDoListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
-        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
-        request.predicate = predicate
-        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
-        request.sortDescriptors = [sortDescriptor]
+        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
-        do {
-            itemArr = try context.fetch(request)
-        } catch {
-            print("Error fetching data from context, \(error)")
+        loadItems(with: request)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadItems()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
         }
-        
-        tableView.reloadData()
     }
 }
