@@ -91,4 +91,24 @@ class ToDoListViewController: UITableViewController {
             print("Error fetching data from context, \(error)")
         }
     }
+    
+    
+}
+
+extension ToDoListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        request.predicate = predicate
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
+        
+        do {
+            itemArr = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context, \(error)")
+        }
+        
+        tableView.reloadData()
+    }
 }
