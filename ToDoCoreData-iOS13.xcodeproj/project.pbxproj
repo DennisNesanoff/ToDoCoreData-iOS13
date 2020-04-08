@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D251C0A243C5CFD002E563F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D251C08243C5CFD002E563F /* DataModel.xcdatamodeld */; };
+		8DA1B6D1243DAA1800B1903B /* Ext + navBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1B6D0243DAA1800B1903B /* Ext + navBar.swift */; };
 		8DDF98E5243CDB3E00ECCC2F /* CathegoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF98E4243CDB3E00ECCC2F /* CathegoryViewController.swift */; };
 		8DE9B2FD2430B9EB00313346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9B2FC2430B9EB00313346 /* AppDelegate.swift */; };
 		8DE9B2FF2430B9EB00313346 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9B2FE2430B9EB00313346 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		8D251C09243C5CFD002E563F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		8DA1B6D0243DAA1800B1903B /* Ext + navBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + navBar.swift"; sourceTree = "<group>"; };
 		8DDF98E4243CDB3E00ECCC2F /* CathegoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CathegoryViewController.swift; sourceTree = "<group>"; };
 		8DE9B2F92430B9EB00313346 /* ToDoCoreData-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDoCoreData-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE9B2FC2430B9EB00313346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				8DDF98E4243CDB3E00ECCC2F /* CathegoryViewController.swift */,
 				8DE9B3122430DAE900313346 /* ToDoListViewController.swift */,
+				8DA1B6D0243DAA1800B1903B /* Ext + navBar.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				8DE9B2FD2430B9EB00313346 /* AppDelegate.swift in Sources */,
 				8D251C0A243C5CFD002E563F /* DataModel.xcdatamodeld in Sources */,
 				8DE9B3132430DAE900313346 /* ToDoListViewController.swift in Sources */,
+				8DA1B6D1243DAA1800B1903B /* Ext + navBar.swift in Sources */,
 				8DE9B2FF2430B9EB00313346 /* SceneDelegate.swift in Sources */,
 				8DDF98E5243CDB3E00ECCC2F /* CathegoryViewController.swift in Sources */,
 			);
