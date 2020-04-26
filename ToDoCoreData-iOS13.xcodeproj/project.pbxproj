@@ -7,29 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D251C0A243C5CFD002E563F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D251C08243C5CFD002E563F /* DataModel.xcdatamodeld */; };
-		8DA1B6D1243DAA1800B1903B /* Ext + navBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1B6D0243DAA1800B1903B /* Ext + navBar.swift */; };
-		8DDF98E5243CDB3E00ECCC2F /* CathegoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF98E4243CDB3E00ECCC2F /* CathegoryViewController.swift */; };
+		8D06BD7B2455757700D10ED3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06BD7A2455757700D10ED3 /* MainViewController.swift */; };
 		8DE9B2FD2430B9EB00313346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9B2FC2430B9EB00313346 /* AppDelegate.swift */; };
 		8DE9B2FF2430B9EB00313346 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9B2FE2430B9EB00313346 /* SceneDelegate.swift */; };
-		8DE9B3042430B9EB00313346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE9B3022430B9EB00313346 /* Main.storyboard */; };
 		8DE9B3062430B9EC00313346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE9B3052430B9EC00313346 /* Assets.xcassets */; };
 		8DE9B3092430B9EC00313346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE9B3072430B9EC00313346 /* LaunchScreen.storyboard */; };
-		8DE9B3132430DAE900313346 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9B3122430DAE900313346 /* ToDoListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D251C09243C5CFD002E563F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		8DA1B6D0243DAA1800B1903B /* Ext + navBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + navBar.swift"; sourceTree = "<group>"; };
-		8DDF98E4243CDB3E00ECCC2F /* CathegoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CathegoryViewController.swift; sourceTree = "<group>"; };
+		8D06BD7A2455757700D10ED3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8DE9B2F92430B9EB00313346 /* ToDoCoreData-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDoCoreData-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE9B2FC2430B9EB00313346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE9B2FE2430B9EB00313346 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8DE9B3032430B9EB00313346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DE9B3052430B9EC00313346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DE9B3082430B9EC00313346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DE9B30A2430B9EC00313346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DE9B3122430DAE900313346 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +57,6 @@
 				8DE9B2FC2430B9EB00313346 /* AppDelegate.swift */,
 				8DE9B2FE2430B9EB00313346 /* SceneDelegate.swift */,
 				8DE9B3162436315B00313346 /* Data Model */,
-				8DE9B3182436318200313346 /* View */,
 				8DE9B3172436317500313346 /* Controller */,
 				8DE9B319243631D500313346 /* Supporting Files */,
 				8DE9B30A2430B9EC00313346 /* Info.plist */,
@@ -76,7 +67,6 @@
 		8DE9B3162436315B00313346 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				8D251C08243C5CFD002E563F /* DataModel.xcdatamodeld */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -84,19 +74,9 @@
 		8DE9B3172436317500313346 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8DDF98E4243CDB3E00ECCC2F /* CathegoryViewController.swift */,
-				8DE9B3122430DAE900313346 /* ToDoListViewController.swift */,
-				8DA1B6D0243DAA1800B1903B /* Ext + navBar.swift */,
+				8D06BD7A2455757700D10ED3 /* MainViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		8DE9B3182436318200313346 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8DE9B3022430B9EB00313346 /* Main.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		8DE9B319243631D500313346 /* Supporting Files */ = {
@@ -168,7 +148,6 @@
 			files = (
 				8DE9B3092430B9EC00313346 /* LaunchScreen.storyboard in Resources */,
 				8DE9B3062430B9EC00313346 /* Assets.xcassets in Resources */,
-				8DE9B3042430B9EB00313346 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,25 +159,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DE9B2FD2430B9EB00313346 /* AppDelegate.swift in Sources */,
-				8D251C0A243C5CFD002E563F /* DataModel.xcdatamodeld in Sources */,
-				8DE9B3132430DAE900313346 /* ToDoListViewController.swift in Sources */,
-				8DA1B6D1243DAA1800B1903B /* Ext + navBar.swift in Sources */,
 				8DE9B2FF2430B9EB00313346 /* SceneDelegate.swift in Sources */,
-				8DDF98E5243CDB3E00ECCC2F /* CathegoryViewController.swift in Sources */,
+				8D06BD7B2455757700D10ED3 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8DE9B3022430B9EB00313346 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8DE9B3032430B9EB00313346 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8DE9B3072430B9EC00313346 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -331,7 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4R95F3PX7;
 				INFOPLIST_FILE = "ToDoCoreData-iOS13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "nesanoff.ToDoCoreData-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -350,7 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4R95F3PX7;
 				INFOPLIST_FILE = "ToDoCoreData-iOS13/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "nesanoff.ToDoCoreData-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -384,19 +352,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8D251C08243C5CFD002E563F /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8D251C09243C5CFD002E563F /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 8D251C09243C5CFD002E563F /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8DE9B2F12430B9EB00313346 /* Project object */;
 }
